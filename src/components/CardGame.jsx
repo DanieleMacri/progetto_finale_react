@@ -9,7 +9,7 @@ export default function CardGame({ game }) {
 
     return (
         <>
-            <article className="col-3 m-4 p-0 card-custom" key={(game.id)}>
+            <article className="col-11 col-md-3 m-4 p-0 card-custom" key={(game.id)}>
                 <LazyLoadGameImage image={image} />
                 <div className="d-flex flex-column justify-content-center">
                     <strong className="text-center my-2">{game.name}</strong>

@@ -3,7 +3,9 @@ import GenresDropdown from "./GenresDropdown";
 export default function Sidebar() {
   return (
     <>
-      <GenresDropdown />
+      <div className="row justify-content-center">
+        <GenresDropdown />
+      </div>
     </>
   )
 }
