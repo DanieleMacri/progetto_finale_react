@@ -58,7 +58,7 @@ export default function GenresDropdown() {
         //                 <li key={genre.id}>
         //                     <Link className="dropdown-item" to="/">
         //                         {genre.name};
-                                
+
         //                     </Link>
         //                 </li>
         //             ))
@@ -83,19 +83,15 @@ export default function GenresDropdown() {
             {error && <small className="text-danger">{error}</small>}
 
             <ul className="dropdown-menu">
-                {genres?.length > 0 ? (
-                    genres.map((genre) => (
+                <ul>
+                    {genres && genres.map((genre) => (
                         <li key={genre.id}>
-                            <Link className="dropdown-item" to={`/genre/${genre.id}`}>
-                                {genre.name}
-                            </Link>
+                            <Link className="dropdown-item" to={`/games/${genre.slug}`}>{genre.name}</Link>
                         </li>
-                    ))
-                ) : (
-                    <li className="dropdown-item text-muted">Nessun genere disponibile</li>
-                )}
+                    ))}
+                </ul>
             </ul>
-            
+
         </div>
     )
 }
