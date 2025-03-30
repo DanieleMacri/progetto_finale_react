@@ -2,14 +2,15 @@ import config from "../../utils/config";
 import { useEffect, useState } from "react";
 import CardGame from "../../components/CardGame";
 import Particles from "../../components/Particles";
+import useFetchSolution from "../../hook/useFetchSolution";
+import "./style.css";
 
 export default function HomePage() {
 
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-
     const initialUrl = "https://api.rawg.io/api/games?key=5bc4899075b34f7abef0dcd6efca1bdb&dates=2024-01-01,2024-12-31&page=1";
-    const key = "5bc4899075b34f7abef0dcd6efca1bdb";
+
+    // custom hooks
+    const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
 
     const load = async () => {
         try {
@@ -25,14 +26,13 @@ export default function HomePage() {
         }
     }
 
-
     useEffect(() => {
         load();
     }, []);
     return (
         <>
             <div className="container-fluid text-center p-0">
-                <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
                     <Particles
                         particleColors={['#ffffff', '#ffffff']}
                         particleCount={200}
@@ -43,13 +43,12 @@ export default function HomePage() {
                         alphaParticles={false}
                         disableRotation={false}
                     />
-
                 </div>
             </div>
 
 
-            <div className="grid-games-list container">
-                <div className="row justify-content-center">
+            <div className="grid-games-list container-fluid">
+                <div className="row justify-content-center m-0">
                     {error && <article>{error}</article>}
                     {data && data.results.map((game) => <CardGame key={game.id} game={game} />)}
                 </div>

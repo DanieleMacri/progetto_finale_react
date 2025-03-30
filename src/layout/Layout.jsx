@@ -9,6 +9,9 @@ export default function Layout() {
             <div>
                 <Navbar />
             </div>
+            {/* <div className="d-flex justify-content-center my-2">
+                <SearchBar />
+            </div> */}
             <div className="style-sidebar-filters">
                 <Sidebar />
             </div>
