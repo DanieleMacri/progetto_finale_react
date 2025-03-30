@@ -70,7 +70,7 @@ export default function GenresDropdown() {
         //         ))}
         //     </ul>
         // </div>
-        <div className="dropdown d-flex justify-content-center bg-danger py-3">
+        <div className="dropdown w-100 d-flex justify-content-center bg-danger py-3 px-0">
             <button
                 className="btn btn-secondary dropdown-toggle"
                 type="button"

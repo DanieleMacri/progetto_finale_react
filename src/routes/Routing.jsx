@@ -3,6 +3,7 @@ import HomePage from "../pages/homepage";
 import ErrorPage from "../pages/error";
 import Layout from "../layout/Layout";
 import GenrePage from "../pages/genrepage";
+import GamePage from "../pages/gamepage";
 
 
 export default function Routing() {

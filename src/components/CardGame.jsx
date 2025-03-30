@@ -18,7 +18,7 @@ export default function CardGame({ game }) {
                     <p className="text-center my-2">{game.released}</p>
                     <div className="d-flex justify-content-center my-2">
                         <button className="rounded-pill button-card-list">
-                            <Link to={`/games/${game.slug}/${game.id}`}></Link>
+                            <Link className="link-button-card" to={`/games/${game.slug}/${game.id}`}>Info</Link>
                         </button>
                     </div>
                 </div>
