@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import SearchBar from "./SearchBar"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import supabase from "../supabase/supabase-client"
-import { div } from "framer-motion/client"
+import SessionContext from "../context/SessionProvider"
+import { ul } from "framer-motion/m"
 
 export default function Navbar() {
+
+    const navigate = useNavigate()
+    // const {session} = useContext(SessionContext)
+
+
 
     const [session, setSession] = useState(null)
 
@@ -22,7 +28,8 @@ export default function Navbar() {
         const { error } = await supabase.auth.signOut()
         if (error) console.log(error);
         alert("Logout effettuato con successo");
-        getSession(null);
+        // getSession(null);
+        navigate("/");
     }
 
     useEffect(() => {
@@ -43,7 +50,15 @@ export default function Navbar() {
                     </div>
                     <div className="col-md-3 d-flex justify-content-end pe-5">
                         {session ? (
-                            <Link className="text-white ul-navbar" onClick={signOut}>Logout</Link>
+                            <ul className="d-flex align-items-center justify-content-center list-unstyled">
+                                <li className="mx-2 mt-2">
+                                    <Link className="text-white ul-navbar" onClick={signOut}>Esci</Link>
+                                </li>
+                                <li className="mx-2 mt-2">
+                                    <Link className="text-white ul-navbar" to="/account">Profilo</Link>
+                                </li>
+                            </ul>
+                            // <Link className="text-white ul-navbar" onClick={signOut}>Logout</Link>
                         ) : (
                             <div className="d-flex justify-content-center align-items-center">
                                 <ul className="d-flex align-items-center justify-content-center list-unstyled">
@@ -56,6 +71,7 @@ export default function Navbar() {
                                 </ul>
                             </div>
                         )}
+
                     </div>
                 </div>
             </nav>

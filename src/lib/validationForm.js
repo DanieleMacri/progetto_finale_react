@@ -39,8 +39,3 @@ export const getErrors = (error) =>
         all[path] = message + issue.message;
         return all;
     })
-
-const { data, error } = await supabase.auth.signInWithPassword({
-    email: 'example@email.com',
-    password: 'example-password',
-})

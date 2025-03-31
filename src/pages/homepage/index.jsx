@@ -12,23 +12,23 @@ export default function HomePage() {
     // custom hooks
     const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
 
-    const load = async () => {
-        try {
-            const response = await fetch(initialUrl);
-            if (!response.ok) {
-                throw new Error(response.statusText);
-            }
-            const json = await response.json();
-            setData(json);
-        } catch (error) {
-            setError(error.message);
-            setData(null);
-        }
-    }
+    // const load = async () => {
+    //     try {
+    //         const response = await fetch(initialUrl);
+    //         if (!response.ok) {
+    //             throw new Error(response.statusText);
+    //         }
+    //         const json = await response.json();
+    //         setData(json);
+    //     } catch (error) {
+    //         setError(error.message);
+    //         setData(null);
+    //     }
+    // }
 
-    useEffect(() => {
-        load();
-    }, []);
+    // useEffect(() => {
+    //     load();
+    // }, []);
     return (
         <>
             <div className="container-fluid text-center p-0">

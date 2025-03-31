@@ -29,7 +29,7 @@ export default function RegisterPage() {
         if (error) {
             const errors = getErrors(error);
             setFormErrors(errors);
-            console.log(errors);
+            console.log(errors, "console log errors riga 32"); //prova
         } else {
             let { error } = await supabase.auth.signUp({
                 email: data.email,
