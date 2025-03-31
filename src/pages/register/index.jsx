@@ -6,7 +6,6 @@ import {
 } from "../../lib/validationForm";
 import supabase from "../../supabase/supabase-client";
 import { useNavigate } from "react-router";
-import { set } from "zod";
 
 export default function RegisterPage() {
 
@@ -29,7 +28,7 @@ export default function RegisterPage() {
         if (error) {
             const errors = getErrors(error);
             setFormErrors(errors);
-            console.log(errors, "console log errors riga 32"); //prova
+            console.log(errors);
         } else {
             let { error } = await supabase.auth.signUp({
                 email: data.email,

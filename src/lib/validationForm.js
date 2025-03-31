@@ -1,5 +1,4 @@
-import z, { undefined } from "zod";
-import supabase from "../supabase/supabase-client";
+import z from "zod";
 
 const passwordRegex = /(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$/;
 const passwordError = "La password deve contenere almeno un lettere maiuscola, una lettera minuscola e un numero.";
@@ -35,7 +34,7 @@ export function getFieldError(property, value) {
 export const getErrors = (error) =>
     error.issues.reduce((all, issue) => {
         const path = issue.path.join("");
-        const message = all[path] ? alla[path] + ", " : "";
+        const message = all[path] ? all[path] + ", " : "";
         all[path] = message + issue.message;
         return all;
     })

@@ -15,11 +15,13 @@ export default function AccountPage() {
         let ignore
         const getProfile = async () => {
             setLoading(true);
+            if (!session) return;
             const { user } = session
 
             const { data, error } = await supabase
                 .from('profiles')
                 .select('username, first_name, last_name')
+                .eq('id', user?.id)
                 .single();
 
             if (!ignore) {
