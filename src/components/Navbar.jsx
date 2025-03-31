@@ -53,7 +53,6 @@ export default function Navbar() {
                                     <li className="mx-2 mt-2">
                                         <Link className="text-white ul-navbar" to="/login">Accedi</Link>
                                     </li>
-
                                 </ul>
                             </div>
                         )}
