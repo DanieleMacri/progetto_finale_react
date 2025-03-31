@@ -32,7 +32,7 @@ export default function HomePage() {
     return (
         <>
             <div className="container-fluid text-center p-0">
-                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                <div style={{ width: '100%', height: '600px', position: 'relative' }}>
                     <Particles
                         particleColors={['#ffffff', '#ffffff']}
                         particleCount={200}

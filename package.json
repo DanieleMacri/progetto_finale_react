@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^12.6.2",
     "gsap": "^3.12.7",
@@ -19,7 +20,8 @@
     "react-dom": "^19.0.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router": "^7.4.0",
-    "react-router-dom": "^7.4.0"
+    "react-router-dom": "^7.4.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

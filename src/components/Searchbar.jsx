@@ -28,12 +28,12 @@ export default function SearchBar() {
                     value={search}
                     aria-invalid={ariaInvalid}
                     aria-label="Search"
-                    className="form-control col-12 w-100 rounded-start-pill"
+                    className="form-control col-12 w-100 rounded-start-pill py-1"
                 />
                 <button
                     type="submit"
                     value="Cerca"
-                    className="btn btn-danger rounded-end-pill"><i className="fa-solid fa-magnifying-glass fa-lg" ></i>
+                    className="searchbar-button rounded-end-pill py-1 px-2"><i className="searchbar-button text-white fa-solid fa-magnifying-glass fa-lg" ></i>
 
                 </button>
             </fieldset>

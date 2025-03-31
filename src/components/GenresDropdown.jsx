@@ -54,9 +54,9 @@ export default function GenresDropdown() {
 
 
        
-        <div className="dropdown w-100 d-flex justify-content-center bg-danger py-3 px-0">
+        <div className="dropdown w-100 d-flex justify-content-center py-2 px-0 ">
             <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-body-tertiary dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"

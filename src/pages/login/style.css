@@ -1,0 +1,17 @@
+.container-form-custom {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 25px;
+}
+
+.button-custom-login-register {
+    transition: 0.8s;
+}
+
+:hover.button-custom-login-register {
+    scale: 1.2;
+    box-shadow: rgba(237, 53, 53, 0.66) 0px 0px 5px 5px;
+    background-color: #ea3232;
+    border: rgb(0, 0, 0) 2px solid;
+    color: white;
+
+}
