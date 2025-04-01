@@ -1,3 +1,18 @@
+/* font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 :root {
   --red-custom: #ea3232;
   --black-custom: #1b1b1f;
@@ -6,7 +21,7 @@
 /* navbar */
 .navbar-custom {
   background-color: var(--black-custom);
-  z-index: 1;
+  z-index: 99;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -15,7 +30,16 @@
 
 .ul-navbar {
   text-decoration: none;
-  
+}
+
+.icon-custom {
+  color: var(--red-custom);
+  rotate: -45deg;
+  transition: 1s;
+}
+
+:hover.icon-custom {
+  rotate: 360deg;
 }
 
 /* searchbar */
@@ -34,6 +58,21 @@
   .style-sidebar-filters {
     margin-top: 100px;
   }
+}
+
+.button-genres-dropdown {
+  background-color: var(--red-custom);
+  border: none;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.list-dropdown {
+  /* background-color: var(--red-custom); */
+
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 /* footer */
@@ -135,6 +174,29 @@
 
 
 /* card GamePage */
+
+.button-favorite {
+  background-color: var(--black-custom);
+  border: none;
+}
+
+:hover.button-favorite {
+  scale: 1.2;
+  
+}
+
+.button-description {
+  background-color: var(--red-custom);
+  border-radius: 25px;
+  border: rgb(0, 0, 0) 2px solid;
+}
+
+:hover.button-description {
+  box-shadow: rgba(237, 53, 53, 0.66) 0px 0px 5px 5px;
+  background-color: whitesmoke;
+  border: rgb(0, 0, 0) 2px solid;
+}
+
 .pixelated-image-card {
   background-color: #222;
   color: var(--color-primary, #fff);
@@ -178,3 +240,4 @@
   display: none;
   position: absolute;
 }
+

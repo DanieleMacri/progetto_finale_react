@@ -54,24 +54,26 @@ export default function GenresDropdown() {
 
 
        
-        <div className="dropdown w-100 d-flex justify-content-center py-2 px-0 ">
+        <div className="dropdown w-100 d-flex justify-content-start align-items-center ps-5 px-0 ">
             <button
-                className="btn btn-body-tertiary dropdown-toggle"
+                className="button-genres-dropdown mt-3"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
             >
-                Generi
+                <p className=""><i class="fa-solid fa-bars fa-lg text-black"></i> Generi</p> 
             </button>
 
             {error && <small className="text-danger">{error}</small>}
 
             <ul className="dropdown-menu">
-                <ul>
+                <ul className="list-group list-dropdown">
                     {genres && genres.map((genre) => (
-                        <li key={genre.id}>
-                            <Link className="dropdown-item" to={`/games/${genre.slug}`}>{genre.name}</Link>
+                        <li key={genre.id} className="">
+                            <Link className="dropdown-item my-0 py-0" to={`/games/${genre.slug}`}>{genre.name}</Link>
+                            <hr class="dropdown-divider"></hr>
                         </li>
+                        
                     ))}
                 </ul>
             </ul>

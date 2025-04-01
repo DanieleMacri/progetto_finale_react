@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="container-fluid">
           <div className="col-2 col-md-3 d-flex justify-content-start">
             <Link className="navbar-brand text-white ps-5" to="/">
-              NextLevel
+              NextLevel <i className="fa-solid fa-gamepad fa-rotate-by fa-lg icon-custom" ></i>
             </Link>
           </div>
           <div className="col-4 col-md-6 d-flex justify-content-end">

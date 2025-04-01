@@ -39,7 +39,7 @@ export default function GenrePage() {
     return (
         <>
             <div className="container-fluid text-center main-custom">
-                <h1 className="text-white py-4">Benvenuto in {genre}</h1>
+                <h1 className="text-white py-4 display-1">Benvenuto in {genre}</h1>
                 {error && <p>{error}</p>}
                 <div className=" row justify-content-center ">
                     {data && data.results.map((game) => <CardGame className="" key={game.id} game={game} />)}

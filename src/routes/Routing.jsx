@@ -21,8 +21,8 @@ export default function Routing() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
-        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

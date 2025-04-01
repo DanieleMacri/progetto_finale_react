@@ -20,7 +20,7 @@ export default function SearchPage() {
     <>
       <div className="main-custom">
         <div className="d-flex justify-content-center py-5">
-          <h1 className="text-white">Risultati per: {game}</h1>
+          <h1 className="text-white display-1">Risultati per: {game}</h1>
         </div>
         {loading && <h3>Loading...</h3>}
         {error && <h3>{error}</h3>}
