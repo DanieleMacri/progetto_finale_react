@@ -112,7 +112,7 @@ export default function GamePage() {
     // Custom hooks
     const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
 
-    const [isExpanded, setIsExpanded] = useState(false); // Stato per il testo espanso
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const load = async () => {
         try {

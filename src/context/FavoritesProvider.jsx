@@ -10,6 +10,7 @@ export default function FavoritesProvider({ children }) {
     const [favorites, setFavorites] = useState([]);
 
     const getFavorites = useCallback(async () => {
+        
         let { data: favourites, error } = await supabase
             .from("favorites")
             .select("*")
@@ -18,7 +19,7 @@ export default function FavoritesProvider({ children }) {
             console.log(error);
             console.log("Errore in console");
         } else {
-            setFavorites(favourites);
+            setFavorites(favourites || []);
         }
     }, [session]);
 
@@ -45,11 +46,32 @@ export default function FavoritesProvider({ children }) {
     };
 
 
+    // useEffect(() => {
+    //     if (session) {
+    //         getFavorites()
+    //     }
+    //     const favorites = supabase
+    //         .channel("favorites")
+    //         .on(
+    //             "postgres_changes",
+    //             { event: "*", schema: "public", table: "favorites" },
+    //             () => getFavorites()
+    //         )
+    //         .subscribe();
+
+    //     return () => {
+    //         if (favorites) {
+    //             supabase.removeChannel(favorites);
+    //         }
+    //         favorites.unsubscribe();
+    //     };
+    // }, [getFavorites, session]);
     useEffect(() => {
         if (session) {
-            getFavorites()
+            getFavorites();
         }
-        const favorites = supabase
+        
+        const favoritesChannel = supabase
             .channel("favorites")
             .on(
                 "postgres_changes",
@@ -57,14 +79,12 @@ export default function FavoritesProvider({ children }) {
                 () => getFavorites()
             )
             .subscribe();
-
+    
         return () => {
-            if (favorites) {
-                supabase.removeChannel(favorites);
-            }
-            favorites.unsubscribe();
+            supabase.removeChannel(favoritesChannel);  // 🔹 Ora rimuoviamo il canale corretto
         };
     }, [getFavorites, session]);
+    
 
 
 
@@ -72,6 +92,7 @@ export default function FavoritesProvider({ children }) {
         <FavoritesContext.Provider
             value={{
                 favorites,
+                setFavorites,
                 addFavorites,
                 removeFavorite,
             }}

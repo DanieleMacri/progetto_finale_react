@@ -17,12 +17,12 @@ export default function Routing() {
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="/games/:genre" element={<GenrePage />} />
-          <Route path="/games/:slug/:id" element={<GamePage />} />
           <Route path="/search" element={<SearchPage />} />
-        </Route>
+          <Route path="/games/:slug/:id" element={<GamePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/login" element={<LoginPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -22,7 +22,10 @@ export default function SessionProvider({ children }) {
   }, []);
 
   return (
-    <SessionContext.Provider value={{ session }}>
+    <SessionContext.Provider
+      value={{
+        session,
+      }}>
       {children}
     </SessionContext.Provider>
   );
