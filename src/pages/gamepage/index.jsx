@@ -90,7 +90,7 @@
 //                             <p className="text-white">Descrizione:</p>
 //                             <p className="text-white">{data && data.description_raw}</p>
 //                         </div>
-                        
+
 //                     </div>
 //                 </div>
 //             </div>
@@ -103,6 +103,7 @@ import PixelTransition from '../../components/PixelTransition';
 import useFetchSolution from "../../hook/useFetchSolution";
 import "./style.css";
 import ToggleFavorite from "../../components/ToggleFavorite";
+import Chatbox from "../../components/Chatbox";
 
 export default function GamePage() {
     const { id } = useParams();
@@ -196,6 +197,9 @@ export default function GamePage() {
                             >
                                 {isExpanded ? "Mostra meno" : "Mostra di più"}
                             </button>
+                        </div>
+                        <div className="style-chatbox">
+                            <Chatbox data={data && data} />
                         </div>
                     </div>
                 </div>

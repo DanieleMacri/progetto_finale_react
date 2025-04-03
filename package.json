@@ -12,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
     "bootstrap": "^5.3.3",
+    "dayjs": "^1.11.13",
     "framer-motion": "^12.6.2",
     "gsap": "^3.12.7",
     "ogl": "^1.0.11",
