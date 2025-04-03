@@ -26,7 +26,7 @@ export default function ToggleFavorite({ data }) {
 
     
 
-    // Funzione toggle per aggiungere o rimuovere dai preferiti
+   
     const handleToggleFavorite = () => {
         if (isFavorite(data.id)) {
             removeFavorite(data);

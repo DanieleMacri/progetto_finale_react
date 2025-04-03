@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import SessionContext from "../../context/SessionContext"
 import FavoritesContext from "../../context/FavoritesContext"
-import { div, p } from "framer-motion/client";
+
 
 
 const favoriteUI = {
@@ -10,6 +10,7 @@ const favoriteUI = {
     alignItems: 'center',
 
 }
+
 
 export default function ProfilePage() {
     const { session } = useContext(SessionContext);
@@ -30,6 +31,7 @@ export default function ProfilePage() {
                                 <img width={150} height={100} src={game.game_image} className="rounded-3" alt="Immagine gioco preferito" />
                                 <p className="text-white ms-5">{game.game_name}</p>
                             </div>
+                            
                             <button className="bg-danger rounded-circle py-1 px-2 border-white text-white" onClick={() => removeFavorite(game.game_id)}>
                                 <i class="fa-solid fa-x fa-lg"></i>
                             </button>

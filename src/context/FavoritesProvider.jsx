@@ -46,26 +46,6 @@ export default function FavoritesProvider({ children }) {
     };
 
 
-    // useEffect(() => {
-    //     if (session) {
-    //         getFavorites()
-    //     }
-    //     const favorites = supabase
-    //         .channel("favorites")
-    //         .on(
-    //             "postgres_changes",
-    //             { event: "*", schema: "public", table: "favorites" },
-    //             () => getFavorites()
-    //         )
-    //         .subscribe();
-
-    //     return () => {
-    //         if (favorites) {
-    //             supabase.removeChannel(favorites);
-    //         }
-    //         favorites.unsubscribe();
-    //     };
-    // }, [getFavorites, session]);
     useEffect(() => {
         if (session) {
             getFavorites();
