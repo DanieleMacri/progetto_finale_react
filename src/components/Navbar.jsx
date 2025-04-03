@@ -41,6 +41,11 @@ export default function Navbar() {
                     Profilo
                   </Link>
                 </li>
+                <li className="mx-2 mt-2">
+                  <Link className="text-white ul-navbar" to="/profile">
+                    Preferiti
+                  </Link>
+                </li>
               </ul>
             ) : (
               // <Link className="text-white ul-navbar" onClick={signOut}>Logout</Link>

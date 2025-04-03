@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import GenresDropdown from "./GenresDropdown";
 
 export default function Sidebar() {
@@ -5,6 +6,9 @@ export default function Sidebar() {
     <>
       <div className="row justify-content-center mx-0 w-100">
         <GenresDropdown />
+      </div>
+      <div>
+        
       </div>
     </>
   )
