@@ -47,11 +47,11 @@ export default function AccountPage() {
         }
     }, [session])
 
-    const updateProfile = async (event) => {
+    const updateProfile = async (event, avatarUrl) => {
         event.preventDefault();
 
         setLoading(true);
-        const { user } = session
+        const { user } = session;
 
         const updates = {
             id: user.id,

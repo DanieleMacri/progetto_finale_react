@@ -16,12 +16,18 @@ export const ConfirmSchema = FormSchema.refine((data) => data);
 
 
 
+
+
 export const FormSchemaLogin = z.object({
     email: z.string().email(),
     password: z.string().min(8).regex(passwordRegex, passwordError),
 })
 
 export const ConfirmSchemaLogin = FormSchemaLogin.refine((data) => data);
+
+
+
+
 
 
 export function getFieldError(property, value) {
