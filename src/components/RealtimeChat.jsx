@@ -9,7 +9,7 @@ const chatContainer = {
     marginTop: '5px',
     padding: '0px 3px',
     width: '100%',
-    height: '50vh',
+    minHeight: '50vh',
     flexDirection: 'column',
     justifyContent: 'space-between',
     backgroundColor: '#1b1b1f',
@@ -78,13 +78,13 @@ export default function RealtimeChat({ data }) {
     
 
     return (
-        <div  style={chatContainer} ref={messageRef}>
+        <div className="chat-custom" style={chatContainer} ref={messageRef}>
             {loadingInitial && <progress></progress>}
             {error && <div>{error}</div>}
             {messages &&
                 messages.map((message) => (
-                    <article className="chat-custom" key={message.id}>
-                        <p className="text-white border-top">{message.profile_username}</p>
+                    <article className="" key={message.id}>
+                        <p className="text-white my-2 border-bottom">{message.profile_username}</p>
                         <small className="text-white">{message.content}</small>
                         <p className="text-white">{dayjs().to(dayjs(message.created_at))}</p>
                     </article>

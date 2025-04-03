@@ -42,8 +42,8 @@ export default function Chatbox({ data }) {
             <div>
                 <form onSubmit={handleMessageSubmit}>
                     <fieldset role="group">
-                        <input type="text" name="message" placeholder="Scrivi un messaggio..."></input> 
-                        <button type="submit">Invia</button>
+                        <input type="text" className="form-chat-custom py-1 ps-2" name="message" placeholder="Scrivi un messaggio..."></input> 
+                        <button type="submit" className="button-chat-custom mt-3 py-1 pe-2">Invia</button>
                     </fieldset>
                 </form>
             </div>
