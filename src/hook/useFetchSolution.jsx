@@ -41,5 +41,7 @@ export default function useFetchSolution(initialUrl) {
         data,
         load,
         updateUrl,
+        setError,
+        setData
     };
 }

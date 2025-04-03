@@ -37,7 +37,7 @@ export default function RegisterPage() {
                     data: {
                         first_name: data.firstName,
                         last_name: data.lastName,
-                        username: data.username
+                        username: data.userName
                     }
                 }
             });

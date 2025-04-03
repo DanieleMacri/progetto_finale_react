@@ -251,6 +251,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--red-custom);
   color: white;
   border-radius: 0px 25px 25px 0px;
+  transition: 10ms;
+}
+
+:hover.button-chat-custom {
+  scale: 1.3;
+  box-shadow: rgba(237, 53, 53, 0.66) 0px 0px 5px 5px;
+  border: rgb(0, 0, 0) 2px solid;
 }
 
 .form-chat-custom {

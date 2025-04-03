@@ -111,7 +111,7 @@ export default function GamePage() {
     const initialUrl = `https://api.rawg.io/api/games/${id}?key=9269195f491e44539d7a2d10ce87ab15`;
 
     // Custom hooks
-    const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
+    const { data, loading, error, setError, setData, updateUrl } = useFetchSolution(initialUrl);
 
     const [isExpanded, setIsExpanded] = useState(false);
 

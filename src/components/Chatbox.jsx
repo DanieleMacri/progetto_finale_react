@@ -17,8 +17,9 @@ export default function Chatbox({ data }) {
                 .from('messages')
                 .insert([
                     {
+                        
                         profile_id: session?.user.id,
-                        profile_username: session?.user.username,
+                        profile_username: session?.user.user_metadata.username,
                         game_id: data.id,
                         content: message
                     }

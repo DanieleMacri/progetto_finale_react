@@ -74,7 +74,7 @@ export default function RealtimeChat({ data }) {
         scrollSmoothToBottom();
     }, [messages]);
 
-    console.log(messages.profile_username);
+    // console.log(messages.profile_username);
     
 
     return (
@@ -84,9 +84,9 @@ export default function RealtimeChat({ data }) {
             {messages &&
                 messages.map((message) => (
                     <article className="" key={message.id}>
-                        <p className="text-white my-2 border-bottom">{message.profile_username}</p>
+                        <p className="text-white my-2">{message.profile_username}</p>
                         <small className="text-white">{message.content}</small>
-                        <p className="text-white">{dayjs().to(dayjs(message.created_at))}</p>
+                        <p className="text-white border-bottom">{dayjs().to(dayjs(message.created_at))}</p>
                     </article>
                 ))}
 

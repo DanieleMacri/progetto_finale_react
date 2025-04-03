@@ -20,7 +20,7 @@ export default function SessionProvider({ children }) {
       subscription.unsubscribe();
     };
   }, []);
-
+  
   return (
     <SessionContext.Provider
       value={{
