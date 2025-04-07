@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import supabase from "../supabase/supabase-client";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 import SessionContext from "../context/SessionContext";
 
 export default function Navbar() {
