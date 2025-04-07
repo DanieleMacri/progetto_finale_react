@@ -55,8 +55,8 @@ If you are developing a production application, we recommend using TypeScript an
 ## Context
 
 * In questo progetto abbiamo utilizzato due Context Provider:
-  1. Session Context, con cui abbiamo gestito l'utente loggato e non.
-  2. Favorites Context, con cui abbiamo gestito la lista dei preferiti.
+-  Session Context, con cui abbiamo gestito l'utente loggato e non.
+-  Favorites Context, con cui abbiamo gestito la lista dei preferiti.
 
 ## Deployment
 
