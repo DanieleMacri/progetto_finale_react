@@ -16,7 +16,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Descrizione
 
-* Il proget
+* NextLevel è un sito web dedicato ai videogiochi dove l'utente registrato può chattare con altri utenti nella pagina del videogioco selezionato, in modo che la conversazione converga su quell'argomento. L'utente ha la possibilità di chiamarsi con un suo username e usare un'immagine avatar da lui scelta. Nella pagina del videogioco ci sono molte informazioni utili all'utente tra cui: data di publicazione, immagine, voto e una descrizione. I videogiochi che più piacciono all'utente possono essere inseriti nei preferiti.
 
 ## API
 
