@@ -25,13 +25,22 @@ export default function ToggleFavorite({ data }) {
     };
 
     
+    // const handleToggleFavorite = () => {
+    //     if (isFavorite(data.id)) {
+    //         removeFavorite(data);
+    //     } else {
+    //         addFavorites(data);
+    //     }
+    // };
 
-   
     const handleToggleFavorite = () => {
         if (isFavorite(data.id)) {
-            removeFavorite(data);
+            const favoriteToRemove = favorites.find(fav => +fav.game_id === +data.id);
+            if (favoriteToRemove) {
+                removeFavorite(favoriteToRemove); // ✅ Passi l'oggetto corretto con `game_id`
+            }
         } else {
-            addFavorites(data);
+            addFavorites(data); // questo va ancora bene
         }
     };
     

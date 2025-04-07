@@ -41,10 +41,11 @@ export default function FavoritesProvider({ children }) {
         await supabase
             .from("favorites")
             .delete()
-            .eq("game_id", game.id)
+            .eq("game_id", game.game_id)
             .eq("user_id", session?.user.id);
     };
 
+   
 
     useEffect(() => {
         if (session) {

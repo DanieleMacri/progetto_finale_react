@@ -32,8 +32,8 @@ export default function ProfilePage() {
                                 <p className="text-white ms-5">{game.game_name}</p>
                             </div>
                             
-                            <button className="bg-danger rounded-circle py-1 px-2 border-white text-white" onClick={() => removeFavorite(game.game_id)}>
-                                <i class="fa-solid fa-x fa-lg"></i>
+                            <button className="bg-danger rounded-circle py-1 px-2 border-white text-white" onClick={() => removeFavorite(game)}>
+                                <i className="fa-solid fa-x fa-lg"></i>
                             </button>
                         </li>
                     ))}
