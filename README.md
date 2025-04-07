@@ -25,18 +25,18 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Stile
 
-* Ho utilizzato la libreria di Bootstrap per Navbar, Searchbar e Dropdown dei generi ovviamente poi modificandoli con il CSS. Le Card e i bottoni sono stati fatti interamente con il CSS. Ho implementato la libreira di React Bits da dove ho preso lo sfondo particellare della Homepage e l'animazione dell'immagine del videogioco nella Gamepage, modificandoli a mio piacimento. Le icone invece sono state prese da Fonteawesome.
+* Ho utilizzato la libreria di Bootstrap per Navbar, Searchbar e Dropdown dei generi ovviamente poi modificandoli con il CSS. Le Card e i bottoni sono stati fatti interamente con il CSS. Ho implementato la libreria di React Bits da dove ho preso lo sfondo particellare della Homepage e l'animazione dell'immagine del videogioco nella Gamepage, modificandoli a mio piacimento. Le icone invece sono state prese da Fonteawesome.
 
 ## Pagine
-
-* Rimpiazza con le pagine visitabili
 
 1. Home page: si presenta con un bel effetto particellare e al di sotto abbiamo la lista di tutti i videogiochi.
 2. Pagina dettaglio videogioco: visualizza tutte le informazioni del videogioco specifico tra cui: nome, immagine, descrizione e chat del gioco.
 3. Pagina Registrazione utente: l'utente può registrarsi con: email, nome, cognome, username e password.
-4. Pagina Profilo: l'utente registrato può modificare username, nome e cognome. può anche aggiungere un'immagine avatar che prima non era possibile inserire.
-5. Pagina generi: in questa pagina saranno presenti solo i videogiochi del genere selezionato.
-6. Pagina ricerca: in questa pagina saranno presenti solo i videogiochi con il nome scritto nella Searchbar.
+4. Pagina Login: l'utente può acccedere con email e password.
+5. Pagina Profilo: l'utente registrato può modificare username, nome e cognome. può anche aggiungere un'immagine avatar che prima non era possibile inserire.
+6. Pagina generi: in questa pagina saranno presenti solo i videogiochi del genere selezionato.
+7. Pagina ricerca: in questa pagina saranno presenti solo i videogiochi con il nome scritto nella Searchbar.
+8. Pagina preferiti: qui l'utente può trovare tutti i suoi videogiochi che ha aggiunto ai preferiti.
 
 ## User Interactions
 
