@@ -40,14 +40,14 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## User Interactions
 
-# Utente non autenticato:
+### Utente non autenticato:
 1. può navigare tra i giochi in piattaforma
 2. può filtrare per categoria i giochi
 3. può cercare per nome i giochi
 4. può registrarsi con email e password in piattaforma
 5. può visitare i profili social presenti nel footer
 
-# Utente autenticato:
+### Utente autenticato:
 5. può creare una lista di giochi favoriti
 6. può chattare con altri utenti nella pagina del gioco selezionato
 7. può modificare: nome, cognome, username e aggiungere un'immagine avatar nella sezione Profilo
