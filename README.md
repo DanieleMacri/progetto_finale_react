@@ -20,30 +20,34 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## API
 
-* Inserisci il link al API usata o al BaaS usato.
 * https://rawg.io/
 * Questo è il link dell' API usata, contiene una grossa lista di videogiochi e per utilizzarla abbiamo bisogno della chiave API.
 
 ## Stile
 
-* Rimpizza con la soluzione di stile usata.
+* Ho utilizzato la libreria di Bootstrap per Navbar, Searchbar e Dropdown dei generi ovviamente poi modificandoli con il CSS. Le Card e i bottoni sono stati fatti interamente con il CSS. Ho implementato la libreira di React Bits da dove ho preso lo sfondo particellare della Homepage e l'animazione dell'immagine del videogioco nella Gamepage, modificandoli a mio piacimento. Le icone invece sono state prese da Fonteawesome.
 
 ## Pagine
 
 * Rimpiazza con le pagine visitabili
 
-1. Pagina 1 - Home page con lista prodotti
-2. Pagina 2 - Pagina dettaglio prodotto
-3. Pagina 3 - Pagina Registrazione utente
+1. Pagina 1 - Home page: https://progetto-finale-react.vercel.app/
+2. Pagina 2 - Pagina dettaglio prodotto: https://progetto-finale-react.vercel.app/games/senuas-saga-hellblade-ii/398401  
+3. Pagina 3 - Pagina Registrazione utente: https://progetto-finale-react.vercel.app/register
 
 ## User Interactions
 
 * Lista di interazioni che utenti autenticati e non posso fare nell'applicazione.
 
-1. Utente non autenticato puo scrollare sui giochi in piattaforma
-2. Utente non autenticato puo filtrare per nome del gioco
-3. Utente non autenicato puo registrarsi con email e password in piattaforma
-4. Utente auteticato puo creare una lista di giochi favoriti
+1. Utente non autenticato può scrollare sui giochi in piattaforma
+2. Utente non autenticato può filtrare per nome del gioco
+3. Utente non autenticato può registrarsi con email e password in piattaforma
+4. Utente non autenticato può visitare i profili social presenti nel footer
+
+   
+5. Utente autenticato può creare una lista di giochi favoriti
+6. Utente autenticato può chattare con altri utenti nella pagina del gioco selezionato
+7. Utente autenticato può modificare: nome, cognome, username e aggiungere un'immagine avatar nella sezione Profilo
 
 ## Context
 
@@ -51,4 +55,4 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Deployment
 
-* Rimpiazza con il link online della tua App.
+* https://progetto-finale-react.vercel.app/
