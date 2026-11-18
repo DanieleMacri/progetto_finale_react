@@ -4,27 +4,26 @@ import SessionContext from "./SessionContext";
 import FavoritesContext from "./FavoritesContext";
 
 export default function FavoritesProvider({ children }) {
-
     const { session } = useContext(SessionContext);
-
     const [favorites, setFavorites] = useState([]);
 
     const getFavorites = useCallback(async () => {
-        
-        let { data: favourites, error } = await supabase
+        if (!session?.user?.id) return;
+
+        const { data: favourites, error } = await supabase
             .from("favorites")
             .select("*")
-            .eq("user_id", session?.user.id);
+            .eq("user_id", session.user.id);
+
         if (error) {
-            console.log(error);
-            console.log("Errore in console");
+            console.error("Errore nel recupero dei preferiti:", error);
         } else {
             setFavorites(favourites || []);
         }
     }, [session]);
 
     const addFavorites = async (game) => {
-        await supabase
+        const { data, error } = await supabase
             .from("favorites")
             .insert([
                 {
@@ -34,40 +33,42 @@ export default function FavoritesProvider({ children }) {
                     game_image: game.background_image,
                 },
             ])
-            .select();
+            .select()
+            .single();
+
+        if (error) {
+            console.error("Errore nell'aggiunta ai preferiti:", error);
+        } else if (data) {
+            // Aggiorna subito lo stato locale aggiungendo il nuovo preferito
+            setFavorites((prev) => [...prev, data]);
+        }
     };
 
     const removeFavorite = async (game) => {
-        await supabase
+        const { error } = await supabase
             .from("favorites")
             .delete()
             .eq("game_id", game.game_id)
             .eq("user_id", session?.user.id);
-    };
 
-   
+        if (error) {
+            console.error("Errore nella rimozione dai preferiti:", error);
+        } else {
+            // Aggiorna subito lo stato locale filtrando via il gioco rimosso
+            setFavorites((prev) =>
+                prev.filter((fav) => +fav.game_id !== +game.game_id)
+            );
+        }
+    };
 
     useEffect(() => {
         if (session) {
             getFavorites();
+        } else {
+            // Svuota i preferiti se l'utente fa logout
+            setFavorites([]);
         }
-        
-        const favoritesChannel = supabase
-            .channel("favorites")
-            .on(
-                "postgres_changes",
-                { event: "*", schema: "public", table: "favorites" },
-                () => getFavorites()
-            )
-            .subscribe();
-    
-        return () => {
-            supabase.removeChannel(favoritesChannel);  // 🔹 Ora rimuoviamo il canale corretto
-        };
     }, [getFavorites, session]);
-    
-
-
 
     return (
         <FavoritesContext.Provider

@@ -1,5 +1,5 @@
 import config from "../../utils/config";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import CardGame from "../../components/CardGame";
 import Particles from "../../components/Particles";
 import useFetchSolution from "../../hook/useFetchSolution";

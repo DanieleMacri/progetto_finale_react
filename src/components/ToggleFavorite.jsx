@@ -24,23 +24,14 @@ export default function ToggleFavorite({ data }) {
         return favorites.some((fav) => fav && +fav.game_id === +id);
     };
 
-    
-    // const handleToggleFavorite = () => {
-    //     if (isFavorite(data.id)) {
-    //         removeFavorite(data);
-    //     } else {
-    //         addFavorites(data);
-    //     }
-    // };
-
     const handleToggleFavorite = () => {
         if (isFavorite(data.id)) {
             const favoriteToRemove = favorites.find(fav => +fav.game_id === +data.id);
             if (favoriteToRemove) {
-                removeFavorite(favoriteToRemove); // ✅ Passi l'oggetto corretto con `game_id`
+                removeFavorite(favoriteToRemove); 
             }
         } else {
-            addFavorites(data); // questo va ancora bene
+            addFavorites(data);
         }
     };
     
